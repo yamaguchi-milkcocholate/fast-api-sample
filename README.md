@@ -26,3 +26,17 @@ uv run uvicorn app.main:app --reload
 ## ライセンス
 
 このプロジェクトは MIT ライセンスの下で提供されています。
+
+## 開発方法
+
+```shell
+# ビルド
+docker compose build
+# 起動
+docker compose up
+# 削除
+docker compose down
+
+# Dockerを使わずにAPIを起動
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
+```
