@@ -1,0 +1,10 @@
+services:
+  fastapi:
+    build: .
+    container_name: fastapi-sample
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./app:/app/app
